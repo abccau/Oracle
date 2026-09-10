@@ -4,7 +4,7 @@ class Embedder:
 
     def __init__(self):
         self.model =  SentenceTransformer(
-            "BAAI/bge-small-en-v1.5"
+            "./models/bge-small"
         )
 
     def embed(self, chunks):
