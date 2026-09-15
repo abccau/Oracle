@@ -19,7 +19,7 @@ class Retriver:
         context = ""
 
         for point in points:
-            context += point.payload["text"]
-            context = "\n\n"
+            context += point.payload["text"] + "\n\n"
+            
 
         return context

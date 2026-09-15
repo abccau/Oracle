@@ -54,6 +54,12 @@ points = retrived.search(query_embedding)
 #     print()
 context = retrived.build_context(points)
 
+# print(type(context))
+# print(len(context))
+# print("Context:", repr(context))
+# print("Query:", repr(query))
+
+
 generator = LLM()
 answer = generator.generate(context, query)
 print(answer.content)

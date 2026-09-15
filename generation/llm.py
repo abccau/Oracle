@@ -6,6 +6,7 @@ class LLM:
         self.llm = ChatOllama(
             model = "qwen3:8b",
             temperature = 0,
+            disable_streaing = True,
         )
 
     def generate(self, context, query):
@@ -30,6 +31,7 @@ class LLM:
             context=context,
             query=query
         )
+        # print(len(formatted_prompt))
 
 
         return self.llm.invoke(formatted_prompt)
